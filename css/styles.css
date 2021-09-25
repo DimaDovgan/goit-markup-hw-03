@@ -8,10 +8,38 @@
   --bkn: #2f303a;
   --bkn-forbtn: #e5e5e5;
   --bkncolor-herobtn-focushoverr: #188ce8;
+  --bkn-team: #f5f4fa;
 }
+p,
+a,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.02em;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .active-nav {
   color: var(--blue) !important;
@@ -29,6 +57,7 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+  border-radius: 4px;
 }
 .focus-hover:focus,
 .focus-hover:hover {
@@ -42,6 +71,22 @@ body {
   letter-spacing: 0.02em;
   color: var(--black-text);
 }
+.header-portfolio {
+  border-bottom-color: #e5e5e5;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+.header-container {
+  display: flex;
+  height: 80px;
+  align-items: center;
+
+  /*align-items: center;*/
+}
+.header-navigator {
+  display: flex;
+  /*align-items: center;*/
+}
 
 .header-contact {
   font-weight: 500;
@@ -50,7 +95,27 @@ body {
   letter-spacing: 0.02em;
   color: var(--gray);
 }
+.header-navigator > .logo {
+  margin-right: 93px;
+  align-items: center;
+}
+.header-nav {
+  display: flex;
+  margin-right: 330px;
+  align-items: center;
+}
 
+.header-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header-contacts {
+  display: flex;
+  align-items: center;
+}
+.header-contacts-item:not(:last-child) {
+  margin-right: 50px;
+}
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -64,25 +129,64 @@ body {
 }
 
 /* -------------hero---------*/
+.hero-container {
+  display: block;
+}
+
 .hero {
   background-color: var(--bkn);
+  height: 600px;
 }
 .hero-title {
+  display: block;
+  width: 696px;
+  padding-top: 200px;
+  margin: 0 auto;
+  text-align: center;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   color: var(--whait);
+  padding-bottom: 30px;
 }
+
 .hero-btn {
+  display: block;
   background-color: var(--blue);
   color: var(--whait);
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
 }
 .hero-btn:focus,
 .hero-btn:hover {
   background: var(--bkncolor-herobtn-focushoverr);
 }
 /* ---benefits-----*/
+.benefits-name {
+  display: none;
+}
+.benefits-container {
+  margin-top: 91px;
+  margin-bottom: 94px;
+}
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+.benefits-parth {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.benefits-text {
+  width: 270px;
+  height: 75px;
+}
+
 .benefits-item {
   font-weight: 700;
   font-size: 14px;
@@ -90,6 +194,8 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--black-text);
+  width: 270px;
+  height: 16px;
 }
 .benefits-text {
   font-weight: 400;
@@ -99,26 +205,77 @@ body {
   color: var(--gray);
 }
 /*-----work----*/
+.work-container {
+  width: 1200px;
+  height: 386px;
+}
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.work-list-parth {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
 .work-item {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
+  text-align: center;
+  padding-bottom: 50px;
 }
 /*---------team--------*/
+.team {
+  height: 648px;
+
+  background-color: var(--bkn-team);
+  margin-top: 94px;
+}
+.team-container {
+}
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+.team-list-person {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+}
 .team-item {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--black-text);
+  text-align: center;
+  padding-top: 94px;
 }
+.box {
+  width: 270px;
+  height: 80px;
+  background: var(--whait);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
 .team-person-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: var(--black-text);
+  text-align: center;
+  padding-top: 30px;
 }
 .team-person-position {
   font-weight: 400;
@@ -126,11 +283,18 @@ body {
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: var(--gray);
+  text-align: center;
 }
 /* -------footr--------------*/
 .footr {
   background-color: var(--bkn);
+  height: 252px;
 }
+
+.footr-container-portfolio {
+  margin-top: 94px;
+}
+
 .footer-logo {
   color: var(--whait);
 }
@@ -148,6 +312,11 @@ body {
   letter-spacing: 0.03em;
   color: var(--gray-footr-cont);
 }
+.log {
+  display: inline-block;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
 /*------------- Портфоліо----*/
 
 .btn-focus-hover:focus,
@@ -155,15 +324,51 @@ body {
   color: var(--whait);
   background-color: var(--blue);
 }
-.filtr-btn {
+
+.project-title,
+.filter-title,
+.portfolio-title {
+  display: none;
+}
+
+.filter-container {
+  margin-bottom: 50px;
+  margin-top: 94px;
+}
+.filter-list {
+  display: flex;
+  justify-content: center;
+}
+.filter-item {
+  padding-left: 8px;
+}
+.filter-btn {
+  display: inline-block;
+  padding: 6px 22px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
   color: var(--black-text);
-  background-color: var(--bkn-forbtn);
+  border-width: 0px;
+  border-radius: 4px;
+  background: #f5f4fa;
 }
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -20px;
+  margin-top: -20px;
+}
+.project-item {
+  width: 370px;
+  flex-basis: calc(100% / 3 - 20px);
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
 .project-name {
+  padding: 20px 24px 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -171,9 +376,19 @@ body {
   letter-spacing: 0.06em;
 }
 .project-text {
+  padding: 4px 24px 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
   color: var(--gray);
   letter-spacing: 0.03em;
+}
+.project-box {
+  height: 110px;
+  width: 370px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+}
+.project-container {
 }
